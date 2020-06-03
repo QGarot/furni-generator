@@ -1,0 +1,10 @@
+{
+  "path.furnidata": "files/furnidata.xml",
+  "path.swfs": "files/swfs/",
+  "path.icons": "files/icons/",
+
+  "db.host": "",
+  "db.user": "",
+  "db.password": "",
+  "db.name": ""
+}

@@ -1,0 +1,56 @@
+-- ----------------------------
+-- Table structure for items_base
+-- ----------------------------
+`id` int(11) UNSIGNED NOT NULL,
+`sprite_id` int(11) NOT NULL DEFAULT 0,
+`item_name` varchar(70) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+`public_name` varchar(56) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
+`width` int(11) NOT NULL DEFAULT 1,
+`length` int(11) NOT NULL DEFAULT 1,
+`stack_height` double(4, 2) NOT NULL DEFAULT 0.00,
+`allow_stack` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '1',
+`allow_sit` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+`allow_lay` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+`allow_walk` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+`allow_gift` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '1',
+`allow_trade` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '1',
+`allow_recycle` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+`allow_marketplace_sell` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+`allow_inventory_stack` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '1',
+`type` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 's',
+`interaction_type` varchar(500) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'default',
+`interaction_modes_count` int(11) NOT NULL DEFAULT 1,
+`vending_ids` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+`multiheight` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+`customparams` varchar(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
+`effect_id_male` int(3) NOT NULL DEFAULT 0,
+`effect_id_female` int(3) NOT NULL DEFAULT 0,
+`clothing_on_walk` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
+PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+
+-- ----------------------------
+-- Table structure for catalog_items
+-- ----------------------------
+DROP TABLE IF EXISTS `catalog_items`;
+CREATE TABLE `catalog_items`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_ids` varchar(666) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `page_id` int(11) NOT NULL,
+  `offer_id` int(11) NOT NULL DEFAULT -1,
+  `song_id` int(3) UNSIGNED NOT NULL DEFAULT 0,
+  `order_number` int(11) NOT NULL DEFAULT 99,
+  `catalog_name` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `cost_credits` int(11) NOT NULL DEFAULT 4,
+  `cost_points` int(11) NOT NULL DEFAULT 0,
+  `points_type` int(3) NOT NULL DEFAULT 0,
+  `amount` int(11) NOT NULL DEFAULT 1,
+  `limited_sells` int(11) NOT NULL DEFAULT 0,
+  `limited_stack` int(11) NOT NULL DEFAULT 0,
+  `extradata` varchar(500) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
+  `have_offer` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '1',
+  `club_only` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 91236856 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
