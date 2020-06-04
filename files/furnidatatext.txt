@@ -1,4 +1,4 @@
-<furnitype id='52258742' classname='dragwin13'>
+<furnitype id='{id}' classname='{name}'>
 <revision>64270</revision>
 <defaultdir>0</defaultdir>
 <xdim>1</xdim>

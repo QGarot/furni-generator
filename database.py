@@ -10,12 +10,14 @@ class Database:
             database=database_name,
             password=password
         )
+        self.cursor = self.connection.cursor()
 
     def insert(self, sql, data):
-        cursor = self.connection.cursor()
-        cursor.execute(sql, data)
+        self.cursor.execute(sql, data)
         self.connection.commit()
-        cursor.close()
+
+    def close_all(self):
+        self.cursor.close()
         self.connection.close()
 
 

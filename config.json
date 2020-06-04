@@ -1,7 +1,7 @@
 {
-  "path.furnidata": "files/furnidata.xml",
-  "path.swfs": "files/swfs/",
-  "path.icons": "files/icons/",
+  "path.furnidata": "C:\\xampp\\htdocs\\Scuti3\\swfs\\gamedata\\furnidata.xml",
+  "path.swfs": "C:\\xampp\\htdocs\\Scuti3\\swfs\\dcr\\hof_furni\\",
+  "path.icons": "C:\\xampp\\htdocs\\Scuti3\\swfs\\dcr\\hof_furni\\",
 
   "db.host": "",
   "db.user": "",
