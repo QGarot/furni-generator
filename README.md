@@ -5,7 +5,12 @@ A furni generator compatible with Arcturus Morningstar (2.3.1+)
 - Make sure you have Python installed.
 - Make sure you have **mysql-connector-python** installed. If not, please run `pip install mysql-connector-python` to install it.
 - Click [here](https://github.com/Tiig3r/furni-generator/archive/master.zip) to download the latest version.
+
+__Database__
 - Put your database information in [this file](https://github.com/Tiig3r/furni-generator/blob/master/database.py) (line 24).
+
+__File and folder__
+- Please open **config.json** to put the correct paths for **furnidata.xml** file, **hof_furni** and **icons** folders.
 
 ## How to use it
 Open a command line prompt from the furni-generator folder, and run `python app.py`. Then configure your furni as well. The script will show you if the item is correctly added on your arcturus catalog!
