@@ -44,7 +44,7 @@ class Manager:
     @staticmethod
     def furnidata_text(item):
         with open("files/furnidatatext.txt") as ftext:
-            text = ftext.read().replace("{id}", item.data[0]).replace("{name}", item.data[2])
+            text = ftext.read().replace("{id}", item.data[0]).replace("{name}", item.data[2]).replace("{public_name}", item.data[3])
             return text
 
     @staticmethod

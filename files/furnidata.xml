@@ -1,11 +1,11 @@
-<furnitype id='{id}' classname='{name}'>
+<furnitype id='52258742' classname='dragwin13'>
 <revision>64270</revision>
 <defaultdir>0</defaultdir>
 <xdim>1</xdim>
 <ydim>1</ydim>
 <partcolors/>
-<name>{public_name}</name>
-<description>{public_name}</description>
+<name>Arcade course de voitures</name>
+<description>Arcade course de voitures</description>
 <adurl/>
 <offerid>13223</offerid>
 <buyout>1</buyout>
