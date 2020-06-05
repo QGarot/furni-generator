@@ -1,6 +1,9 @@
 ## Furni generator
 A furni generator compatible with Arcturus Morningstar (2.3.1+)
 
+## What is that?
+**Furni-Generator** is a script written in Python. It allows you to add a furni without editing database or other files manually. In other words, once you have configured your furni as you want, the script will automatically update your `items_base`and `catalog_items`tables and download furni files where you want.
+
 ## How to install
 - Make sure you have Python installed.
 - Make sure you have **mysql-connector-python** installed. If not, please run `pip install mysql-connector-python` to install it.
