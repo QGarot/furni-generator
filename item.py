@@ -68,8 +68,6 @@ class Item:
         with open("files/log.txt", "a") as log:
             log.write("ID: " + self.data[0] + " | item_name: " + self.data[2] + "\n")
 
-        db.close_all()
-
     def add_item_to_furnidata(self):
         """
         Save item in furnidata.xml file

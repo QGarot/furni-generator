@@ -7,6 +7,7 @@
 @catalog: Frost
 """
 import item
+from database import db
 
 
 launched = True
@@ -69,4 +70,7 @@ while launched:
 
     print("\n\n")
     a = str(input("Continuer ? (Oui/Non) >"))
-    launched = a == "Oui" or a == "oui"
+    if a != "Oui" or a != "oui":
+        launched = False
+        db.close_all()
+
